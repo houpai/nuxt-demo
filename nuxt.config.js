@@ -12,7 +12,8 @@ module.exports = {
 
   // 可定义服务器访问主机和端口,类似于webpack的devServe
   server: {
-    port: 8888 // default: 3000
+    port: 8888, // default: 3000
+    host: '192.168.1.112', // 默认为 localhost
   },
   mode: "universal",
   /*
