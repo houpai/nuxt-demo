@@ -30,47 +30,47 @@
 </template>
 
 <script>
-export default {
-  async asyncData({ $axios }) {
-    // let articlesList = [];
-    // $axios
-    //   .get("PArticleController/selectArticle", {
-    //     type: 3,
-    //     searchName: "",
-    //     page: 1,
-    //     limit: 4
-    //   })
-    //   .then(res => {
-    //     console.log('res====', res.data);
-    //     articlesList = res.data.data;
-    //   });
-    // return {
-    //   articlesList: articlesList
-    // };
-    let personMessage;
-    await $axios.get("bins/b54rm").then(res => {
-      console.log("data====", res.data);
-      personMessage = res.data;
-    });
-    return {
-      personMessage: personMessage
-    };
-  },
-  data() {
-    return {};
+  export default {
+    async asyncData({$axios}) {
+      // let articlesList = [];
+      // $axios
+      //   .get("PArticleController/selectArticle", {
+      //     type: 3,
+      //     searchName: "",
+      //     page: 1,
+      //     limit: 4
+      //   })
+      //   .then(res => {
+      //     console.log('res====', res.data);
+      //     articlesList = res.data.data;
+      //   });
+      // return {
+      //   articlesList: articlesList
+      // };
+      let personMessage
+      await $axios.get("bins/b54rm").then(res => {
+        console.log("data====", res.data)
+        personMessage = res.data
+      })
+      return {
+        personMessage: personMessage
+      }
+    },
+    data() {
+      return {}
+    }
+    // created() {
+    //   if (process.client) {
+    //     console.log("lodash", window._);
+    //   }
+    // }
   }
-  // created() {
-  //   if (process.client) {
-  //     console.log("lodash", window._);
-  //   }
-  // }
-};
 </script>
 
 <style lang="less" scoped>
-.container {
-  color: #fff;
-  font-size: 100px;
-  text-align: center;
-}
+  .container {
+    color: #fff;
+    font-size: 100px;
+    text-align: center;
+  }
 </style>
